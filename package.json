@@ -2,15 +2,15 @@
   "name": "scully-docker",
   "version": "0.0.0",
   "scripts": {
-    "docker:build": "docker build . -t beeman/scully-docker:latest",
-    "docker:push": "docker push beeman/scully-docker:latest",
-    "docker:run": "docker run -p 5000:5000 -it beeman/scully-docker:latest"
+    "docker:build": "docker buildx build --platform linux/amd64 -t jasper95/scully-docker:latest --push .",
+    "docker:push": "docker push jasper95/scully-docker:latest",
+    "docker:run": "docker run -p 5000:5000 -it jasper95/scully-docker:latest"
   },
   "private": true,
   "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/beeman/scully-docker.git"
+    "url": "https://github.com/jasper95/scully-docker.git"
   }
 }

@@ -1,6 +1,6 @@
-FROM node:14-alpine
+FROM node:12.22.7-alpine
 
-RUN apk add --no-cache \
+RUN apk add \
       chromium \
       nss \
       freetype \
@@ -10,5 +10,5 @@ RUN apk add --no-cache \
       ttf-freefont
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
-ENV SCULLY_PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser 
+ENV SCULLY_PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser
 
